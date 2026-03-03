@@ -7,97 +7,116 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
   <style>
-    body {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      min-height: 100vh;
-      color: #fff !important; /* all text white */
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .card {
-      border-radius: 1rem;
-      background: #2c2c54;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      color: #fff !important;
-    }
-    .gradient-header {
-      background: linear-gradient(90deg, #6a11cb, #2575fc);
-      color: #fff !important;
-      border-radius: 1rem 1rem 0 0;
-      padding: 1.2rem;
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.6rem;
-      letter-spacing: 1px;
-    }
-    .file-link {
-      word-break: break-all;
-      color: #fff !important;
-    }
-    label, h5, p, strong {
-      color: #fff !important;
-    }
-    .btn-connect, .btn-primary {
-      font-weight: 600;
-    }
-    #connectionStatus, #status {
-      font-weight: 600;
-      color: #fff !important;
-    }
-    .alert {
-      background-color: rgba(255, 255, 255, 0.15) !important;
-      border: none;
-      color: #fff !important;
-    }
-    input.form-control {
-      background-color: #444a76;
-      color: #fff;
-      border: 1px solid #5a62a1;
-    }
-    input.form-control:focus {
-      background-color: #545d8e;
-      color: #fff;
-      border-color: #6a11cb;
-      box-shadow: 0 0 8px #6a11cb;
-    }
-        /* Container wrapping the uploaded files list and heading */
-    .uploaded-files-section {
-      background-color: #2563eb; /* blue background similar to success alert */
-      border-radius: 0.5rem;
-      padding: 1rem 1.5rem;
-      margin-top: 1.5rem;
-      color: #fff !important;
-    }
+  body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    min-height: 100vh;
+    color: #f8fafc !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-    /* The actual list */
-    .uploaded-files-section #fileList {
-      background-color: transparent; /* transparent to inherit container bg */
-      max-height: 300px;
-      overflow-y: auto;
-      padding-left: 0;
-      margin-top: 0.75rem;
-    }
+  .card {
+    border-radius: 1rem;
+    background: #1e293b;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    color: #f8fafc !important;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
 
-    /* Each list item style */
-    .uploaded-files-section #fileList .list-group-item {
-      background-color: rgba(255, 255, 255, 0.15); /* translucent white */
-      color: #fff !important;
-      border: none;
-      margin-bottom: 0.5rem;
-      border-radius: 0.3rem;
-      font-weight: 600;
-    }
+  .gradient-header {
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+    color: #fff !important;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
 
-    /* Links inside list items */
-    .uploaded-files-section #fileList .list-group-item a {
-      color: #bfdbfe; /* lighter blue */
-      text-decoration: underline;
-    }
+  label, h5, p, strong {
+    color: #e2e8f0 !important;
+  }
 
-    .uploaded-files-section #fileList .list-group-item a:hover {
-      color: #93c5fd; /* even lighter on hover */
-    }
+  .btn-connect {
+    border: 1px solid #f59e0b;
+    color: #f59e0b;
+    font-weight: 600;
+  }
 
-  </style>
+  .btn-connect:hover {
+    background: #f59e0b;
+    color: #111827;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border: none;
+    font-weight: 600;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  }
+
+  #connectionStatus, #status {
+    font-weight: 600;
+    color: #fff !important;
+  }
+
+  .alert {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff !important;
+  }
+
+  input.form-control {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #334155;
+  }
+
+  input.form-control:focus {
+    background-color: #0f172a;
+    color: #fff;
+    border-color: #f59e0b;
+    box-shadow: 0 0 10px rgba(245,158,11,0.6);
+  }
+
+  /* Uploaded Files Section */
+  .uploaded-files-section {
+    background-color: #111827;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .uploaded-files-section #fileList {
+    background-color: transparent;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-left: 0;
+    margin-top: 0.75rem;
+  }
+
+  .uploaded-files-section #fileList .list-group-item {
+    background-color: rgba(245,158,11,0.1);
+    color: #fbbf24 !important;
+    border: 1px solid rgba(245,158,11,0.3);
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+  }
+
+  .uploaded-files-section #fileList .list-group-item a {
+    color: #fcd34d;
+    text-decoration: underline;
+  }
+
+  .uploaded-files-section #fileList .list-group-item a:hover {
+    color: #fde68a;
+  }
+</style>
 </head>
 <body>
 
