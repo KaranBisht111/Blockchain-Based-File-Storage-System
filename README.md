@@ -1,4 +1,4 @@
-# 📦 Blockchain-Based File Storage System
+# 📦 Blockchain Based File Storage System
 
 A decentralized file storage system built using Ethereum Smart Contracts, IPFS, and MetaMask integration.  
 This project allows users to upload files to IPFS and securely store the file metadata on the Ethereum blockchain.
@@ -101,16 +101,35 @@ Stores the uploaded file information on-chain.
 
 ## 📸 Screenshots
 
-### Home Page
-Add screenshot here
+### 🖥️ Dashboard
 
-### MetaMask Connection
-Add screenshot here
-
-### File Upload
-Add screenshot here
+<p align="center">
+  <img src="screenshots/dashboard.png" width="850"/>
+</p>
 
 ---
+
+### 🔗 MetaMask Connection
+
+<p align="center">
+  <img src="screenshots/connect.png" width="850"/>
+</p>
+
+---
+
+### 🦊 MetaMask Transaction Confirmation
+
+<p align="center">
+  <img src="screenshots/metamask-transaction.png" width="850"/>
+</p>
+
+---
+
+### ✅ Final Uploaded File Output
+
+<p align="center">
+  <img src="screenshots/final.png" width="850"/>
+</p>
 
 ## 🧪 How to Run
 
