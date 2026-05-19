@@ -217,3 +217,6 @@ This project is licensed under the MIT License.
 Karan Bisht
 
 ---
+## ⭐ Support
+
+If you found this project useful, give it a star ⭐ on GitHub.

@@ -1,0 +1,6 @@
+Solidity ^0.8.17
+Web3.js ^1.10.0
+Bootstrap 5.3
+MetaMask Wallet
+Pinata IPFS API
+Ethereum Blockchain
